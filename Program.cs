@@ -10,13 +10,13 @@ namespace TestLoggingInDocker
         {            
             try
             {
-                string dayNumberStarted = DateTime.Now.Date.Day.ToString();
-                while (true && dayNumberStarted == DateTime.Now.Date.Day.ToString())
+                string hourStarted = DateTime.Now.Date.Hour.ToString();
+                while (true && hourStarted == DateTime.Now.Date.Hour.ToString())
                 {
                     StreamWriter sw = new StreamWriter("C:\\TestLogging.log", true);
                     sw.WriteLine("Logger");
                     sw.Close();
-                    Thread.Sleep(60000);
+                    Thread.Sleep(1000);
                 }               
             }
             catch (Exception e)
