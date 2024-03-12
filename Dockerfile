@@ -13,5 +13,10 @@ ADD https://go.microsoft.com/fwlink/?linkid=2192409 /app/monitorAgent/AzureMonit
 ## RUN msiexec.exe /i C:\app\monitorAgent\AzureMonitorAgentClientSetup.msi /qn  
 ## TODO    /L*v "C:\TestLogging.log"
 
+## powershell the DCR?
+
+COPY \bin\Debug\TestLoggingInDocker.exe /app/
+ENTRYPOINT \app\TestLoggingInDocker.exe
+
 
 ## https://learn.microsoft.com/en-us/azure/azure-monitor/agents/azure-monitor-agent-windows-client
