@@ -13,8 +13,8 @@ namespace TestLoggingInDocker
                 string hourStarted = DateTime.Now.Hour.ToString();
                 while (true && hourStarted == DateTime.Now.Hour.ToString())
                 {
-                    StreamWriter sw = new StreamWriter("C:\\TestLogging.log", true);
-                    sw.WriteLine("Logger");
+                    StreamWriter sw = new StreamWriter("TestLogging.log", true);
+                    sw.WriteLine("Logger " + DateTime.Now.ToShortTimeString() );
                     sw.Close();
                     Thread.Sleep(1000);
                 }               
