@@ -10,6 +10,7 @@ namespace TestLoggingInDocker
         {            
             try
             {
+                // Write to a log file every second for up to one hour
                 string hourStarted = DateTime.Now.Hour.ToString();
                 while (true && hourStarted == DateTime.Now.Hour.ToString())
                 {
