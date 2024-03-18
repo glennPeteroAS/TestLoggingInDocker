@@ -6,8 +6,8 @@ namespace TestLoggingInDocker
 {
     internal class Program
     {
-        static void Main(string[] args)
-        {            
+        static void Main()
+        {
             try
             {
                 // Write to a log file every second for up to one hour
@@ -15,10 +15,10 @@ namespace TestLoggingInDocker
                 while (true && hourStarted == DateTime.Now.Hour.ToString())
                 {
                     StreamWriter sw = new StreamWriter("TestLogging.log", true);
-                    sw.WriteLine("Logger " + DateTime.Now.ToShortTimeString() );
+                    sw.WriteLine("Logger " + DateTime.Now.ToShortTimeString());
                     sw.Close();
                     Thread.Sleep(1000);
-                }               
+                }
             }
             catch (Exception e)
             {
@@ -27,7 +27,7 @@ namespace TestLoggingInDocker
             finally
             {
                 Console.WriteLine("Executing finally block.");
-            }            
+            }
         }
     }
 }

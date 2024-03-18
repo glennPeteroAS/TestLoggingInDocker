@@ -1,4 +1,4 @@
-$TenantID = "xxxxxxxxx-xxxx-xxx"  # Your Tenant ID               ?
+$TenantID = "xxxxxxxxx-xxxx-xxx"  # Your Tenant ID               ? ecdfe738-82f2-48bb-a549-cddebff0ec27
 $SubscriptionID = "xxxxxx-xxxx-xxxxx" # Your Subscription ID     ? maybe 1b7cdf85-ede0-4d6b-8ce9-555cd3072301
 $ResourceGroup = "rg-yourResourseGroup" # Your resourcegroup     rg-testLoggingInDocker
 
